@@ -190,14 +190,14 @@ html {
   border : dotted #d7d7f9;
 }
 #rotateX:hover{
-  transform:rotateX(180deg);}
+  transform:rotateX(20deg);}
 /* Rotate Y method*/
 #rotateY{
   background-color: lightpink;
   border : dotted #d7d7f9;
 }
 #rotateY:hover{
-  transform:rotateY(180deg);}
+  transform:rotateY(20deg);}
 /* Scale method*/
 #scale:hover{
   transform:scale(2,3);}
@@ -309,10 +309,10 @@ background-color: #ffccf1;}
   @keyframes matrix3d{
     0%{transform: matrix3d(0);}
     33%{transform: matrix3d(
-      -0.6,     1.3478, 0, 0,
-      -2.3478. -0.6,   0, 0,
+      -0.6,     1.3478,  0,   0,
+      -2.3478,   -0.6,   0, 0,
       0, 0,  1, 0,
-      0, 0, 10, 1 )}
+      0, 0, 10, 1 );}
     66%{tranform: matrix3d(
       0.50, 0, 8660, 0,
       0.595877, 0, -0.866025, 0,
@@ -367,7 +367,6 @@ background-color: #ffccf1;}
 
   #timing{
     transition-timing-function: linear;
-    animation-name: timing;
   }
 
   #timing:hover{
@@ -383,7 +382,7 @@ border: #ffdbdb;
   animation-duration:10s;
 }
   @keyframes example{
-    from{backgroud-color: #ff94af;;}
+    from{backgroud-color: #ff94af;}
     to{background-color: #ffdbdb;}
   }
   #animate2{
@@ -449,7 +448,22 @@ left:200px; top:200px;}
     100%{background: #d98cc4; left:0px; top:0px;}
   }
 
-  #linerar{
+#rotateX1{
+  background-color: lightpink;
+  border: 3px dotted #fff7ad;
+}
+#rotateX1:hover{
+  transform: rotateX(150deg);
+}
+#rotateY1{
+  background-color: #fffbcc;
+  border: 3px solid pink;
+}
+#rotateY1:hover{
+  transform:rotateY(150deg);
+}
+
+  #linear{
     width:100px;
     height:100px;
     background: #fb8989;
@@ -480,6 +494,16 @@ left:200px; top:200px;}
     border: 3px solid #ffdbdb;
     text-align: center;
   }
+#ease-out{
+  width: 100px;
+  height:100px;
+  background-color: #eeacfb;
+  position:relative;
+  animation: timing 3s infinite;
+  animation-timing-function: ease-out;
+  border: 3px solid #ffdbdb;
+  text-align:center;
+}
 
   #ease-in-out{
     width:100px;
@@ -525,4 +549,8 @@ left:200px; top:200px;}
 @keyframes timing1{
 from{left:0px;}
   to{left:200px;}
+}
+
+body{
+  background-color: lavender;
 }
